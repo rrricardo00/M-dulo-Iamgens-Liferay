@@ -1,0 +1,53 @@
+@import "tirarFormatcao";
+$tamnhoTela: 740px;
+div {
+    &.main {
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        @media (max-width: #{$tamnhoTela}) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        &.inverter {
+            flex-direction: row-reverse;
+            margin-left: 20px;
+            @media screen and (max-width: #{$tamnhoTela}) {
+                margin-left: 0px;
+            }
+        }
+    }
+    div {
+        &.moduloImagem {
+            margin-right: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                max-width: 450px;
+                margin-left: 10px;
+            }
+            @media screen and (max-width: #{$tamnhoTela}) {
+                max-width: 104%;
+            }
+        }
+        @media (max-width: #{$tamnhoTela}) {
+            padding-bottom: 5px;
+            div {
+                &.moduloImagem img {
+                    margin-left: 0;
+                    max-width: 105%;
+                }
+            }
+        }
+    }
+    div {
+        &.texto {
+            margin: 0 10px 0 10px;
+            @media screen and (max-width: #{$tamnhoTela}) {
+                text-align: center;
+                margin: 0 10px 0 10px;
+            }
+        }
+    }
+}
